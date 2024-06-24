@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         verificarGanhador("mbappe");
     }
 
-    public void selecionarMessi( View view ){
+    /*public void selecionarMessi( View view ){
         verificarGanhador("messi");
     }
 
@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void selecionarHalland( View view ){
         verificarGanhador("halland");
-    }
+    }*/
 
     private String gerarEscolhaAleatoriaApp() {
 
-        String[] opcoes = {"vini", "bellingham", "mbappe", "messi", "ronaldo", "halland"};
-        int jogadorAleatorio = new Random().nextInt(5);
+        String[] opcoes = {"vini", "bellingham", "mbappe"};
+        int jogadorAleatorio = new Random().nextInt(3);
 
         ImageView imagemApp = findViewById(R.id.image_app);
         String escolhaApp = opcoes[jogadorAleatorio];
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             case "mbappe":
                 imagemApp.setImageResource( R.drawable.mbappe);
                 break;
-            case "messi":
+            /*case "messi":
                 imagemApp.setImageResource( R.drawable.messi);
                 break;
             case "ronaldo":
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "halland":
                 imagemApp.setImageResource( R.drawable.halland);
-                break;
+                break;*/
         }
 
         return escolhaApp;
@@ -90,25 +90,19 @@ public class MainActivity extends AppCompatActivity {
         TextView textoResultado = findViewById(R.id.text_resultado);
 
         if(
-                (escolhaApp == "vini" && escolhaUsuario == "halland") ||
-                (escolhaApp == "bellingham" && escolhaUsuario == "ronaldo") ||
-                (escolhaApp == "mbappe" && escolhaUsuario == "messi") ||
-                (escolhaApp == "messi" && escolhaUsuario == "mbappe") ||
-                (escolhaApp == "ronaldo" && escolhaUsuario == "bellingham") ||
-                (escolhaApp == "halland" && escolhaUsuario == "vini")
+                (escolhaApp == "vini" && escolhaUsuario == "mbappe") ||
+                (escolhaApp == "bellingham" && escolhaUsuario == "vini") ||
+                (escolhaApp == "mbappe" && escolhaUsuario == "bellingham")
         ){ // app ganhador
-                textoResultado.setText("Você Perdeu! :(");
+                textoResultado.setText("Você Perdeu! \uD83D\uDE13");
         } else if( // Usuario ganhador
-               (escolhaUsuario == "vini" && escolhaApp == "halland") ||
-               (escolhaUsuario == "bellingham" && escolhaApp == "ronaldo") ||
-               (escolhaUsuario == "mbappe" && escolhaApp == "messi") ||
-               (escolhaUsuario == "messi" && escolhaApp == "mbappe") ||
-               (escolhaUsuario == "ronaldo" && escolhaApp == "bellingham") ||
-               (escolhaUsuario == "halland" && escolhaApp == "vini")
+                (escolhaUsuario == "vini" && escolhaApp == "mbappe") ||
+                (escolhaUsuario == "bellingham" && escolhaApp == "vini") ||
+                (escolhaUsuario == "mbappe" && escolhaApp == "bellingham")
         ){
-            textoResultado.setText("Você Ganhou!! :)");
+            textoResultado.setText("Você Ganhou! \uD83D\uDE00");
         }else{ // Empatou
-            textoResultado.setText("Empatamos!!! ;)");
+            textoResultado.setText("Empatamos! \uD83D\uDE05");
         }
 
         //   System.out.println("Item clicado :" + escolhaUsuario);
