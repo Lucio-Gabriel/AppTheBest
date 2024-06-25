@@ -7,5 +7,5 @@ O que veremos e nossos trabalhos nesse projeto?
 *Estúdio Android
 
 Imagem do Projeto.
-![image](https://github.com/Lucio-Gabriel/AppTheBest/assets/129960209/0cb315cf-aaf5-4861-ac96-7b0f34815325)
+
 ![WhatsApp Image 2024-06-25 at 08 13 55](https://github.com/Lucio-Gabriel/AppTheBest/assets/129960209/ca5b88f2-a648-471f-bc33-53f48ef6ccfa)
